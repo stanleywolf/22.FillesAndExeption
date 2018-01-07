@@ -1,0 +1,19 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _01.oddLines
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] file=File.ReadAllLines("input.txt");
+            var oddLines = file.Where((line, i) => i % 2 == 1);
+            File.WriteAllLines("output.txt",oddLines);
+        }
+    }
+}
